@@ -23,25 +23,24 @@ CMMagnetometer.[x|y|z] raw magentometer data
 PURPLE progress bars  
 show difference between green and blue measures.
 
-__notes__  
-
 This is only accurate on a device positioned horizontally as it only uses the x and y magnetometer readings. The point of this app is to make sense of the Apple API's and to get a feel of how the magnetometer works. We could enhance it by correcting for device tilt - some kind of matrix multiplication with Core Motion's attitude rotation matrix - but we are not trying to demonstrate how to get the _best_ reading (Apple already provides that with their CLHeading `magneticHeading` parameter), but rather to show how the raw figures compare.
 
 
 
 
-__StackOverflow notes__  
-A dig through the Apple docs...
+[__StackOverflow notes__](http://stackoverflow.com/questions/15380632/in-ios-what-is-the-difference-between-the-magnetic-field-values-from-the-core-l)
+
+To unravel this I've spent a bit of time digging through the Apple docs.
 
 There are three ways of obtaining magnetometer data
 
-1/ Core Motion  framework  
-CMMotionManagers's `CMMagnetometer` class
+1/ [Core Motion  framework](http://developer.apple.com/library/ios/#documentation/CoreMotion/Reference/CoreMotion_Reference/_index.html)  
+CMMotionManagers's [`CMMagnetometer`](http://developer.apple.com/library/ios/#documentation/CoreMotion/Reference/CMMagnetometerData_Class/Reference/Reference.html#//apple_ref/doc/c_ref/CMMagnetometerData) class
 
 2/ Core Motion  framework  
-CMDeviceMotion `CMCalibratedMagneticField` property
+[CMDeviceMotion](http://developer.apple.com/library/ios/#documentation/CoreMotion/Reference/CMDeviceMotion_Class/Reference/Reference.html#//apple_ref/doc/c_ref/CMDeviceMotion) `CMCalibratedMagneticField` property
 
-3 / Core Location framework  
+3 / [Core Location framework](https://developer.apple.com/library/IOs/#documentation/CoreLocation/Reference/CLLocation_Class/CLLocation/CLLocation.html)  
 CLLocationManager's `CLHeading`
 
 
@@ -86,7 +85,7 @@ Here are the relevant `CLHeading` 'raw' properties
     This value represents the [x|y|z]-axis deviation from the magnetic field lines being tracked by the device.
     (_older versions of the docs add:_) The value reported by this property is normalized to the range -128 to +128.
 
-[]I am not clear how a microtesla measurement can be 'normalized' (compressed? clipped?) to a range of +/-128 and still represent the unit it claims to measure. Perhaps that's why the sentence was removed from the docs, although the units in most cases seem to conform to this kind of range.] 
+[I am not clear how a microtesla measurement can be 'normalized' (compressed? clipped?) to a range of +/-128 and still represent the unit it claims to measure. Perhaps that's why the sentence was removed from the docs, although the units in most cases seem to conform to this kind of range.] 
 
 
 >_CLHeadingComponentValue_   
@@ -210,7 +209,7 @@ In practice there is much more going on here than just measuring sensor output. 
 
 Of `CMCalibratedMagneticField` and `CLHeading` component x y and z values, the former appears to be slightly more accurate and more stable than the latter, although I haven't tested these extensively in different environments. `CLHeading`  seems to be much more sensitive to local magnetic fields than `CMCalibratedMagneticField`, which is surprising, as the docs suggest that these are filtered out in `CLHeading`, but not filtered out in `CMCalibratedMagneticField`.
 
-I have put a Magnet-O-Meter demo app on gitHub which demonstrates some of these differences. It's quite interesting waving magnets around your device when the app is running and watching how the various APIs react:
+I have put a [Magnet-O-Meter demo app on gitHub](https://github.com/foundry/MagnetoMeter) which demonstrates some of these differences. It's quite interesting waving magnets around your device when the app is running and watching how the various APIs react:
 
 _CMMagnetometer_ doesn't react much to anything. The onboard magnetic fields are clearly far more significant than local external magnets, let alone the earth's magnetic file. On my iPhone 4S it consistently points to the top of the device; on the iPad mini it points always to the right edge of the device.  
 _CLHeading.[x|y|z]_  is the most vulnerable to local external fields, whether moving or static relative to the device, which seems to contradict the docs somewhat.  
