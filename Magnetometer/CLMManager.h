@@ -1,0 +1,24 @@
+//
+//  CLMManager.h
+//  BackgroundTracker
+//
+//  Created by foundry on 09/03/2013.
+//  Copyright (c) 2013 foundry. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreMotion/CoreMotion.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface CLMManager : NSObject
+
+@property (nonatomic, strong) CMMotionManager* motionManager;
+@property (nonatomic, strong) CLLocationManager* locationManager;
+
+- (void) startLocating;
+- (void) startLocatingWithDistanceFilter:(CLLocationDistance)distanceFilter
+                         desiredAccuracy:(CLLocationAccuracy)desiredAccuracy;
+
++ (CLMManager*) sharedManager;
+
+@end

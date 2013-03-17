@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="YXT-Zd-ukw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="aGY-fw-d7Z">
+            <objects>
+                <navigationController id="FNm-Za-reX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Egw-22-Xvi">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YXT-Zd-ukw" kind="push" identifier="segue" id="cSI-RR-DgI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXh-Y7-hzI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="-464"/>
+        </scene>
+        <!--Magnetometer View Controller - Magnetometer-->
+        <scene sceneID="bgM-mD-5gq">
+            <objects>
+                <viewController id="YXT-Zd-ukw" customClass="MagnetometerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUk-aN-7vn">
+                        <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" id="D68-mb-IGf" customClass="Circle">
+                                <rect key="frame" x="-116" y="-260" width="1000" height="1000"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="xbz-bB-wUS">
+                                <rect key="frame" x="0.0" y="360" width="768" height="622"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="jCh-sv-i6f">
+                                        <rect key="frame" x="0.0" y="73" width="768" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="3rb-T3-vUS">
+                                                <rect key="frame" x="72" y="19" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5go-Zt-lja">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Awe-Uv-Nf8">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Fnl-QD-Ehd" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="I15-oE-FMr" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CLHeading magneticHeading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mbe-8H-mhb">
+                                                <rect key="frame" x="72" y="0.0" width="220" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="lmN-k6-lL3">
+                                        <rect key="frame" x="0.0" y="113" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="JIj-V8-GAf">
+                                                <rect key="frame" x="72" y="63" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uZ7-AX-zPc">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="59u-Vn-vD1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="FiI-2I-KQT" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="6LX-OS-8iW" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="ND0-Ez-FF5">
+                                                <rect key="frame" x="72" y="41" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pes-hK-1ea">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3cT-5J-3Zc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="cSk-KG-GPV" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="rvb-AP-r2e" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="fIp-ri-ZgV">
+                                                <rect key="frame" x="72" y="19" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BX2-gO-7kV">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p4m-8C-9mJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="gMj-sq-GW9" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="mzU-Wr-HVx" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CMMagneticField" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uX9-qA-yVd">
+                                                <rect key="frame" x="72" y="0.0" width="133" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="Puu-zp-tEN">
+                                                <rect key="frame" x="72" y="85" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SzZ-Nz-8al">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pbm-Lf-52c">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="usY-ZJ-qoM" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="2gM-nD-U6f" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="xNh-eM-acz">
+                                        <rect key="frame" x="0.0" y="233" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="sUa-Za-qCR">
+                                                <rect key="frame" x="72" y="63" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aqA-98-8wX">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dfx-qV-olK">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="5WE-48-ihF" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="tn8-8G-9Zu" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="7pB-1b-J20">
+                                                <rect key="frame" x="72" y="41" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aTk-Qu-nL0">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a3m-2H-7H4">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="KvX-fe-VHc" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="AiD-qx-FZL" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="YJM-Hi-nPI">
+                                                <rect key="frame" x="72" y="19" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sbx-HM-Y3N">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8rC-jM-muf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="dRg-wY-Ip3" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="M5k-7X-stc" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CMCalibratedMagneticField" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y6j-5g-SAb">
+                                                <rect key="frame" x="72" y="0.0" width="215" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="g9Q-9a-bst">
+                                                <rect key="frame" x="72" y="85" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EpH-3G-6ZW">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l24-Xd-i1f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="KVy-0q-Xhn" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Vgv-ub-Pge" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="eOj-h9-RO6">
+                                        <rect key="frame" x="0.0" y="353" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="rcf-8m-tdg">
+                                                <rect key="frame" x="72" y="63" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9P-gH-44P">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="71Z-0i-ZGf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Noq-J4-SqI" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Z3j-Fi-lpw" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="Cxy-uh-lJQ">
+                                                <rect key="frame" x="72" y="41" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GAq-Gh-shC">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDi-ux-HJf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="GHh-JC-YNw" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Yel-3q-GCj" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="5fs-8l-7s2">
+                                                <rect key="frame" x="72" y="19" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dxS-sz-IDp">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RgY-cb-YZt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="njF-az-dyc" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Uw6-t2-48n" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CL Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dnd-u3-lnj">
+                                                <rect key="frame" x="72" y="0.0" width="215" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="Btt-uB-QME">
+                                                <rect key="frame" x="72" y="85" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p1a-k8-i1g">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EfW-4Q-o7t">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="oTF-ne-IPx" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="il3-7X-E0U" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="2lE-9w-IyH">
+                                        <rect key="frame" x="0.0" y="473" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="7nP-8r-JdL">
+                                                <rect key="frame" x="72" y="63" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fF9-os-7ag">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c6q-PU-o1E">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="2mP-of-KsZ" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="ylh-kY-6bF" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="rFb-vl-1Rr">
+                                                <rect key="frame" x="72" y="41" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JPh-dd-yhI">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="y" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G04-vO-0yW">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Q94-zT-XZG" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="plo-Dh-RpJ" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <view contentMode="scaleToFill" id="kcl-KG-NBa">
+                                                <rect key="frame" x="72" y="19" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nZE-LK-o1S">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RlW-Hy-4rw">
+                                                        <rect key="frame" x="0.0" y="0.0" width="29" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="sM2-pf-6AT" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="MWI-7y-DsP" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="CLH  CMC diff" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XgM-yB-GV2">
+                                                <rect key="frame" x="72" y="0.0" width="294" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="shA-Cc-0oJ">
+                                                <rect key="frame" x="72" y="85" width="624" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="5.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h27-RZ-QMw">
+                                                        <rect key="frame" x="574" y="0.0" width="50" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="s" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TTF-df-0hF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="9DC-Lj-dtZ" customClass="InverseProgressView">
+                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                    <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="NNl-r0-Q8Z" customClass="ForwardProgressView">
+                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                    </progressView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="7tV-Cs-vNa" customClass="Arrow">
+                                <rect key="frame" x="224" y="80" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="7C4-88-hbU" customClass="Arrow">
+                                <rect key="frame" x="224" y="80" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="hp4-Ew-DgW" customClass="Arrow">
+                                <rect key="frame" x="224" y="80" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="hqu-au-PuA" customClass="Arrow">
+                                <rect key="frame" x="224" y="80" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Magnetometer" id="nHw-k5-Lc4"/>
+                    <connections>
+                        <outlet property="arrow" destination="7tV-Cs-vNa" id="2OK-6j-J12"/>
+                        <outlet property="arrow2" destination="7C4-88-hbU" id="0Wp-mw-MP4"/>
+                        <outlet property="arrow3" destination="hqu-au-PuA" id="Q9p-hv-T5s"/>
+                        <outlet property="arrow4" destination="hp4-Ew-DgW" id="HXq-Xo-1o6"/>
+                        <outlet property="circle" destination="D68-mb-IGf" id="Gce-9f-X5F"/>
+                        <outlet property="clHeadingBarS" destination="il3-7X-E0U" id="anv-J6-Arf"/>
+                        <outlet property="clHeadingBarX" destination="Uw6-t2-48n" id="M9l-4A-3ha"/>
+                        <outlet property="clHeadingBarY" destination="Yel-3q-GCj" id="hhd-78-hdx"/>
+                        <outlet property="clHeadingBarZ" destination="Z3j-Fi-lpw" id="Ksc-yV-o7J"/>
+                        <outlet property="clHeadingBar_S" destination="oTF-ne-IPx" id="4vQ-34-NVe"/>
+                        <outlet property="clHeadingBar_X" destination="njF-az-dyc" id="vgP-9a-EXu"/>
+                        <outlet property="clHeadingBar_Y" destination="GHh-JC-YNw" id="mFc-ob-P9L"/>
+                        <outlet property="clHeadingBar_Z" destination="Noq-J4-SqI" id="ChZ-9T-1hl"/>
+                        <outlet property="clHeadingLabelS" destination="p1a-k8-i1g" id="IY3-3k-kUL"/>
+                        <outlet property="clHeadingLabelX" destination="dxS-sz-IDp" id="blE-sV-JVC"/>
+                        <outlet property="clHeadingLabelY" destination="GAq-Gh-shC" id="pAP-j6-OuL"/>
+                        <outlet property="clHeadingLabelZ" destination="h9P-gH-44P" id="J8d-3w-QxC"/>
+                        <outlet property="clMagneticHeadingBarX" destination="I15-oE-FMr" id="3cn-W2-wr7"/>
+                        <outlet property="clMagneticHeadingBar_X" destination="Fnl-QD-Ehd" id="apC-aQ-y9V"/>
+                        <outlet property="clMagneticHeadingLabelX" destination="5go-Zt-lja" id="lZV-0j-p82"/>
+                        <outlet property="cmCalibratedMagneticFieldBarS" destination="Vgv-ub-Pge" id="fFr-ur-FSR"/>
+                        <outlet property="cmCalibratedMagneticFieldBarX" destination="M5k-7X-stc" id="Skz-IV-pc0"/>
+                        <outlet property="cmCalibratedMagneticFieldBarY" destination="AiD-qx-FZL" id="PN7-Zf-bNx"/>
+                        <outlet property="cmCalibratedMagneticFieldBarZ" destination="tn8-8G-9Zu" id="6lR-Ye-AUJ"/>
+                        <outlet property="cmCalibratedMagneticFieldBar_S" destination="KVy-0q-Xhn" id="uPa-R9-8ya"/>
+                        <outlet property="cmCalibratedMagneticFieldBar_X" destination="dRg-wY-Ip3" id="rqF-VC-mEt"/>
+                        <outlet property="cmCalibratedMagneticFieldBar_Y" destination="KvX-fe-VHc" id="iTd-uO-Id1"/>
+                        <outlet property="cmCalibratedMagneticFieldBar_Z" destination="5WE-48-ihF" id="JuW-nY-mFf"/>
+                        <outlet property="cmCalibratedMagneticFieldLabelS" destination="EpH-3G-6ZW" id="zOH-28-Eks"/>
+                        <outlet property="cmCalibratedMagneticFieldLabelX" destination="sbx-HM-Y3N" id="w5Y-mj-4tl"/>
+                        <outlet property="cmCalibratedMagneticFieldLabelY" destination="aTk-Qu-nL0" id="PZ3-CJ-Ikc"/>
+                        <outlet property="cmCalibratedMagneticFieldLabelZ" destination="aqA-98-8wX" id="tR5-bI-GUy"/>
+                        <outlet property="cmMagneticFieldBarS" destination="2gM-nD-U6f" id="HPE-Di-2eJ"/>
+                        <outlet property="cmMagneticFieldBarX" destination="mzU-Wr-HVx" id="1uH-IZ-AG1"/>
+                        <outlet property="cmMagneticFieldBarY" destination="rvb-AP-r2e" id="H1j-8L-zr0"/>
+                        <outlet property="cmMagneticFieldBarZ" destination="6LX-OS-8iW" id="3JO-rS-Qbv"/>
+                        <outlet property="cmMagneticFieldBar_S" destination="usY-ZJ-qoM" id="pEp-EV-ivG"/>
+                        <outlet property="cmMagneticFieldBar_X" destination="gMj-sq-GW9" id="0K2-oA-f17"/>
+                        <outlet property="cmMagneticFieldBar_Y" destination="cSk-KG-GPV" id="CXH-xq-8YX"/>
+                        <outlet property="cmMagneticFieldBar_Z" destination="FiI-2I-KQT" id="KD0-sm-8tI"/>
+                        <outlet property="cmMagneticFieldLabelS" destination="SzZ-Nz-8al" id="dGf-vl-xmq"/>
+                        <outlet property="cmMagneticFieldLabelX" destination="BX2-gO-7kV" id="aCU-TJ-FB3"/>
+                        <outlet property="cmMagneticFieldLabelY" destination="Pes-hK-1ea" id="4Qj-aJ-qbx"/>
+                        <outlet property="cmMagneticFieldLabelZ" destination="uZ7-AX-zPc" id="thP-XX-69L"/>
+                        <outlet property="diffBarS" destination="NNl-r0-Q8Z" id="shx-yg-VIK"/>
+                        <outlet property="diffBarX" destination="MWI-7y-DsP" id="TsA-i8-sHb"/>
+                        <outlet property="diffBarY" destination="plo-Dh-RpJ" id="N6g-Qu-6iD"/>
+                        <outlet property="diffBarZ" destination="ylh-kY-6bF" id="vHF-z6-0Cu"/>
+                        <outlet property="diffBar_S" destination="9DC-Lj-dtZ" id="Uky-6Y-kuH"/>
+                        <outlet property="diffBar_X" destination="sM2-pf-6AT" id="YF6-4g-kNH"/>
+                        <outlet property="diffBar_Y" destination="Q94-zT-XZG" id="DvE-cO-Vof"/>
+                        <outlet property="diffBar_Z" destination="2mP-of-KsZ" id="5YU-Kt-fqF"/>
+                        <outlet property="diffLabelS" destination="h27-RZ-QMw" id="vLY-rK-kx3"/>
+                        <outlet property="diffLabelX" destination="nZE-LK-o1S" id="bps-uy-3ao"/>
+                        <outlet property="diffLabelY" destination="JPh-dd-yhI" id="8m6-ai-Gsl"/>
+                        <outlet property="diffLabelZ" destination="fF9-os-7ag" id="k3W-Iz-I0T"/>
+                        <outletCollection property="cmMagneticCollection" destination="gMj-sq-GW9" id="TFE-PZ-seM"/>
+                        <outletCollection property="cmMagneticCollection" destination="cSk-KG-GPV" id="egL-vo-7sX"/>
+                        <outletCollection property="cmMagneticCollection" destination="FiI-2I-KQT" id="ayr-sL-Hmo"/>
+                        <outletCollection property="cmMagneticCollection" destination="usY-ZJ-qoM" id="cgL-wR-aZa"/>
+                        <outletCollection property="cmMagneticCollection" destination="mzU-Wr-HVx" id="Veo-6i-lzW"/>
+                        <outletCollection property="cmMagneticCollection" destination="rvb-AP-r2e" id="1Zg-fi-WuD"/>
+                        <outletCollection property="cmMagneticCollection" destination="6LX-OS-8iW" id="TUR-Gs-LI1"/>
+                        <outletCollection property="cmMagneticCollection" destination="2gM-nD-U6f" id="xcF-ew-rNW"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="dRg-wY-Ip3" id="ez1-Po-SJR"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="KvX-fe-VHc" id="6VW-6G-G1h"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="5WE-48-ihF" id="blY-L5-QZf"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="M5k-7X-stc" id="awJ-Gg-4Ql"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="AiD-qx-FZL" id="QGQ-Q5-PkA"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="tn8-8G-9Zu" id="Oub-7L-WAT"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="Vgv-ub-Pge" id="1Br-KZ-Jnf"/>
+                        <outletCollection property="cmCalibratedMagneticFieldCollection" destination="KVy-0q-Xhn" id="N6K-ao-XsF"/>
+                        <outletCollection property="clHeadingCollection" destination="njF-az-dyc" id="YN6-1I-lBL"/>
+                        <outletCollection property="clHeadingCollection" destination="GHh-JC-YNw" id="x3x-W3-Euy"/>
+                        <outletCollection property="clHeadingCollection" destination="Noq-J4-SqI" id="zbE-ah-lJA"/>
+                        <outletCollection property="clHeadingCollection" destination="oTF-ne-IPx" id="zWl-Ag-iyB"/>
+                        <outletCollection property="clHeadingCollection" destination="Uw6-t2-48n" id="Khf-cS-fUa"/>
+                        <outletCollection property="clHeadingCollection" destination="Yel-3q-GCj" id="6N3-vM-4zP"/>
+                        <outletCollection property="clHeadingCollection" destination="Z3j-Fi-lpw" id="ymE-TJ-e8e"/>
+                        <outletCollection property="clHeadingCollection" destination="il3-7X-E0U" id="tHM-7e-CZI"/>
+                        <outletCollection property="diffCollection" destination="sM2-pf-6AT" id="KT8-E9-Uoc"/>
+                        <outletCollection property="diffCollection" destination="Q94-zT-XZG" id="NK4-th-1uo"/>
+                        <outletCollection property="diffCollection" destination="2mP-of-KsZ" id="oJW-fE-P7q"/>
+                        <outletCollection property="diffCollection" destination="9DC-Lj-dtZ" id="rnK-lT-tQG"/>
+                        <outletCollection property="diffCollection" destination="MWI-7y-DsP" id="j1m-DD-enC"/>
+                        <outletCollection property="diffCollection" destination="plo-Dh-RpJ" id="tZe-Tc-2Ne"/>
+                        <outletCollection property="diffCollection" destination="ylh-kY-6bF" id="lVO-2Q-eNG"/>
+                        <outletCollection property="diffCollection" destination="NNl-r0-Q8Z" id="PkJ-vy-3OE"/>
+                        <outletCollection property="clMagneticHeadingCollection" destination="I15-oE-FMr" id="8JC-Vs-SjQ"/>
+                        <outletCollection property="clMagneticHeadingCollection" destination="Fnl-QD-Ehd" id="Fz2-fR-aPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UGv-bw-hM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="890" y="-501"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

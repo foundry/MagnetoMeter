@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AB0C1E3B16F39B8E008C88CB /* InverseProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0C1E3A16F39B8E008C88CB /* InverseProgressView.m */; };
+		AB0C1E3E16F39DC1008C88CB /* ForwardProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB0C1E3D16F39DC1008C88CB /* ForwardProgressView.m */; };
+		AB134BDC16E21EA700C7933F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB134BDB16E21EA700C7933F /* UIKit.framework */; };
+		AB134BDE16E21EA700C7933F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB134BDD16E21EA700C7933F /* Foundation.framework */; };
+		AB134BE016E21EA700C7933F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB134BDF16E21EA700C7933F /* CoreGraphics.framework */; };
+		AB134BE616E21EA800C7933F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB134BE416E21EA800C7933F /* InfoPlist.strings */; };
+		AB134BE816E21EA800C7933F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AB134BE716E21EA800C7933F /* main.m */; };
+		AB134BEC16E21EA800C7933F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AB134BEB16E21EA800C7933F /* AppDelegate.m */; };
+		AB134BEE16E21EA800C7933F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AB134BED16E21EA800C7933F /* Default.png */; };
+		AB134BF016E21EA800C7933F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB134BEF16E21EA800C7933F /* Default@2x.png */; };
+		AB134BF216E21EA800C7933F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AB134BF116E21EA800C7933F /* Default-568h@2x.png */; };
+		AB134BF516E21EA800C7933F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB134BF316E21EA800C7933F /* MainStoryboard_iPhone.storyboard */; };
+		AB134BF816E21EA800C7933F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB134BF616E21EA800C7933F /* MainStoryboard_iPad.storyboard */; };
+		AB134C2016E2326100C7933F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB134C1F16E2326100C7933F /* CoreMotion.framework */; };
+		AB134C2216E2326900C7933F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB134C2116E2326900C7933F /* CoreLocation.framework */; };
+		AB4EC9A416EB9697009E65ED /* CLMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4EC9A316EB9697009E65ED /* CLMManager.m */; };
+		AB72659E16ECA1E900968638 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB72659D16ECA1E900968638 /* CoreData.framework */; };
+		ABA01F3316E2C56B003ABB42 /* MotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA01F3216E2C56B003ABB42 /* MotionViewController.m */; };
+		ABA01F3A16E2E44B003ABB42 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABA01F3916E2E44B003ABB42 /* QuartzCore.framework */; };
+		ABB72CA716F36FB800AC6407 /* Arrow.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB72CA616F36FB800AC6407 /* Arrow.m */; };
+		ABD6D1AE16F2A8C200452ABD /* MagnetometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD6D1AD16F2A8C200452ABD /* MagnetometerViewController.m */; };
+		ABD90D5C16EA6592002253C9 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = AB4984AE16E91AC100197D60 /* location.db */; };
+		ABDDF40D16F3A6770092B71F /* UIImage+FillColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF40C16F3A6770092B71F /* UIImage+FillColor.m */; };
+		ABDDF41316F4B98E0092B71F /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF41216F4B98E0092B71F /* Circle.m */; };
+		ABDDF41616F4DB950092B71F /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF41516F4DB950092B71F /* CircleLayer.m */; };
+		ABFE81EB16F58A8B00B1DD95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ABFE81EA16F58A8B00B1DD95 /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AB0C1E3916F39B8D008C88CB /* InverseProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InverseProgressView.h; sourceTree = "<group>"; };
+		AB0C1E3A16F39B8E008C88CB /* InverseProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InverseProgressView.m; sourceTree = "<group>"; };
+		AB0C1E3C16F39DC1008C88CB /* ForwardProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardProgressView.h; sourceTree = "<group>"; };
+		AB0C1E3D16F39DC1008C88CB /* ForwardProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardProgressView.m; sourceTree = "<group>"; };
+		AB134BD816E21EA700C7933F /* MagnetoMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagnetoMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB134BDB16E21EA700C7933F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AB134BDD16E21EA700C7933F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AB134BDF16E21EA700C7933F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AB134BE316E21EA800C7933F /* MagnetoMeter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MagnetoMeter-Info.plist"; sourceTree = "<group>"; };
+		AB134BE516E21EA800C7933F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AB134BE716E21EA800C7933F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AB134BE916E21EA800C7933F /* MagnetoMeter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MagnetoMeter-Prefix.pch"; sourceTree = "<group>"; };
+		AB134BEA16E21EA800C7933F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AB134BEB16E21EA800C7933F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AB134BED16E21EA800C7933F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AB134BEF16E21EA800C7933F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AB134BF116E21EA800C7933F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AB134BF416E21EA800C7933F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		AB134BF716E21EA800C7933F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		AB134C1F16E2326100C7933F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		AB134C2116E2326900C7933F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB4984AE16E91AC100197D60 /* location.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = location.db; sourceTree = "<group>"; };
+		AB4EC9A216EB9697009E65ED /* CLMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLMManager.h; sourceTree = "<group>"; };
+		AB4EC9A316EB9697009E65ED /* CLMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLMManager.m; sourceTree = "<group>"; };
+		AB72659D16ECA1E900968638 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		ABA01F3116E2C56B003ABB42 /* MotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionViewController.h; sourceTree = "<group>"; };
+		ABA01F3216E2C56B003ABB42 /* MotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionViewController.m; sourceTree = "<group>"; };
+		ABA01F3916E2E44B003ABB42 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		ABB72CA516F36FB800AC6407 /* Arrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Arrow.h; sourceTree = "<group>"; };
+		ABB72CA616F36FB800AC6407 /* Arrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Arrow.m; sourceTree = "<group>"; };
+		ABD6D1AC16F2A8C200452ABD /* MagnetometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagnetometerViewController.h; sourceTree = "<group>"; };
+		ABD6D1AD16F2A8C200452ABD /* MagnetometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnetometerViewController.m; sourceTree = "<group>"; };
+		ABDDF40B16F3A6770092B71F /* UIImage+FillColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FillColor.h"; sourceTree = "<group>"; };
+		ABDDF40C16F3A6770092B71F /* UIImage+FillColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FillColor.m"; sourceTree = "<group>"; };
+		ABDDF41116F4B98E0092B71F /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		ABDDF41216F4B98E0092B71F /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		ABDDF41416F4DB950092B71F /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayer.h; sourceTree = "<group>"; };
+		ABDDF41516F4DB950092B71F /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
+		ABFE81EA16F58A8B00B1DD95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AB134BD516E21EA700C7933F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB72659E16ECA1E900968638 /* CoreData.framework in Frameworks */,
+				ABA01F3A16E2E44B003ABB42 /* QuartzCore.framework in Frameworks */,
+				AB134C2216E2326900C7933F /* CoreLocation.framework in Frameworks */,
+				AB134C2016E2326100C7933F /* CoreMotion.framework in Frameworks */,
+				AB134BDC16E21EA700C7933F /* UIKit.framework in Frameworks */,
+				AB134BDE16E21EA700C7933F /* Foundation.framework in Frameworks */,
+				AB134BE016E21EA700C7933F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AB134BCF16E21EA700C7933F = {
+			isa = PBXGroup;
+			children = (
+				ABFE81EA16F58A8B00B1DD95 /* README.md */,
+				AB134BE116E21EA800C7933F /* MagnetoMeter */,
+				AB134BDA16E21EA700C7933F /* Frameworks */,
+				AB134BD916E21EA700C7933F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AB134BD916E21EA700C7933F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AB134BD816E21EA700C7933F /* MagnetoMeter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB134BDA16E21EA700C7933F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AB72659D16ECA1E900968638 /* CoreData.framework */,
+				ABA01F3916E2E44B003ABB42 /* QuartzCore.framework */,
+				AB134C2116E2326900C7933F /* CoreLocation.framework */,
+				AB134C1F16E2326100C7933F /* CoreMotion.framework */,
+				AB134BDB16E21EA700C7933F /* UIKit.framework */,
+				AB134BDD16E21EA700C7933F /* Foundation.framework */,
+				AB134BDF16E21EA700C7933F /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB134BE116E21EA800C7933F /* MagnetoMeter */ = {
+			isa = PBXGroup;
+			children = (
+				AB4EC99E16EB9000009E65ED /* Model */,
+				ABF934D816E3929600C8D199 /* Views */,
+				ABF934D716E3928400C8D199 /* Resources */,
+				ABF934D616E3925D00C8D199 /* MotionViewControllers */,
+				AB134BEA16E21EA800C7933F /* AppDelegate.h */,
+				AB134BEB16E21EA800C7933F /* AppDelegate.m */,
+				AB134BE216E21EA800C7933F /* Supporting Files */,
+			);
+			name = MagnetoMeter;
+			path = Magnetometer;
+			sourceTree = "<group>";
+		};
+		AB134BE216E21EA800C7933F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB4984AE16E91AC100197D60 /* location.db */,
+				AB134BE316E21EA800C7933F /* MagnetoMeter-Info.plist */,
+				AB134BE416E21EA800C7933F /* InfoPlist.strings */,
+				AB134BE716E21EA800C7933F /* main.m */,
+				AB134BE916E21EA800C7933F /* MagnetoMeter-Prefix.pch */,
+				AB134BED16E21EA800C7933F /* Default.png */,
+				AB134BEF16E21EA800C7933F /* Default@2x.png */,
+				AB134BF116E21EA800C7933F /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AB4EC99E16EB9000009E65ED /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB4EC9A216EB9697009E65ED /* CLMManager.h */,
+				AB4EC9A316EB9697009E65ED /* CLMManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ABF934D616E3925D00C8D199 /* MotionViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ABA01F3116E2C56B003ABB42 /* MotionViewController.h */,
+				ABA01F3216E2C56B003ABB42 /* MotionViewController.m */,
+				ABD6D1AC16F2A8C200452ABD /* MagnetometerViewController.h */,
+				ABD6D1AD16F2A8C200452ABD /* MagnetometerViewController.m */,
+			);
+			name = MotionViewControllers;
+			sourceTree = "<group>";
+		};
+		ABF934D716E3928400C8D199 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		ABF934D816E3929600C8D199 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AB134BF316E21EA800C7933F /* MainStoryboard_iPhone.storyboard */,
+				AB134BF616E21EA800C7933F /* MainStoryboard_iPad.storyboard */,
+				ABB72CA516F36FB800AC6407 /* Arrow.h */,
+				ABB72CA616F36FB800AC6407 /* Arrow.m */,
+				ABDDF41116F4B98E0092B71F /* Circle.h */,
+				ABDDF41216F4B98E0092B71F /* Circle.m */,
+				ABDDF41416F4DB950092B71F /* CircleLayer.h */,
+				ABDDF41516F4DB950092B71F /* CircleLayer.m */,
+				ABDDF40B16F3A6770092B71F /* UIImage+FillColor.h */,
+				ABDDF40C16F3A6770092B71F /* UIImage+FillColor.m */,
+				AB0C1E3C16F39DC1008C88CB /* ForwardProgressView.h */,
+				AB0C1E3D16F39DC1008C88CB /* ForwardProgressView.m */,
+				AB0C1E3916F39B8D008C88CB /* InverseProgressView.h */,
+				AB0C1E3A16F39B8E008C88CB /* InverseProgressView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AB134BD716E21EA700C7933F /* MagnetoMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB134C1316E21EA800C7933F /* Build configuration list for PBXNativeTarget "MagnetoMeter" */;
+			buildPhases = (
+				AB134BD416E21EA700C7933F /* Sources */,
+				AB134BD516E21EA700C7933F /* Frameworks */,
+				AB134BD616E21EA700C7933F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagnetoMeter;
+			productName = BackgroundTracker2;
+			productReference = AB134BD816E21EA700C7933F /* MagnetoMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AB134BD016E21EA700C7933F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = foundry;
+			};
+			buildConfigurationList = AB134BD316E21EA700C7933F /* Build configuration list for PBXProject "MagnetoMeter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AB134BCF16E21EA700C7933F;
+			productRefGroup = AB134BD916E21EA700C7933F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB134BD716E21EA700C7933F /* MagnetoMeter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AB134BD616E21EA700C7933F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABD90D5C16EA6592002253C9 /* location.db in Resources */,
+				AB134BE616E21EA800C7933F /* InfoPlist.strings in Resources */,
+				AB134BEE16E21EA800C7933F /* Default.png in Resources */,
+				AB134BF016E21EA800C7933F /* Default@2x.png in Resources */,
+				AB134BF216E21EA800C7933F /* Default-568h@2x.png in Resources */,
+				AB134BF516E21EA800C7933F /* MainStoryboard_iPhone.storyboard in Resources */,
+				AB134BF816E21EA800C7933F /* MainStoryboard_iPad.storyboard in Resources */,
+				ABFE81EB16F58A8B00B1DD95 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AB134BD416E21EA700C7933F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB134BE816E21EA800C7933F /* main.m in Sources */,
+				AB134BEC16E21EA800C7933F /* AppDelegate.m in Sources */,
+				ABA01F3316E2C56B003ABB42 /* MotionViewController.m in Sources */,
+				AB4EC9A416EB9697009E65ED /* CLMManager.m in Sources */,
+				ABD6D1AE16F2A8C200452ABD /* MagnetometerViewController.m in Sources */,
+				ABB72CA716F36FB800AC6407 /* Arrow.m in Sources */,
+				AB0C1E3B16F39B8E008C88CB /* InverseProgressView.m in Sources */,
+				AB0C1E3E16F39DC1008C88CB /* ForwardProgressView.m in Sources */,
+				ABDDF40D16F3A6770092B71F /* UIImage+FillColor.m in Sources */,
+				ABDDF41316F4B98E0092B71F /* Circle.m in Sources */,
+				ABDDF41616F4DB950092B71F /* CircleLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AB134BE416E21EA800C7933F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB134BE516E21EA800C7933F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AB134BF316E21EA800C7933F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB134BF416E21EA800C7933F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		AB134BF616E21EA800C7933F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB134BF716E21EA800C7933F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AB134C1116E21EA800C7933F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB134C1216E21EA800C7933F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AB134C1416E21EA800C7933F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MagnetoMeter/MagnetoMeter-Prefix.pch";
+				INFOPLIST_FILE = "MagnetoMeter/MagnetoMeter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = MagnetoMeter;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AB134C1516E21EA800C7933F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MagnetoMeter/MagnetoMeter-Prefix.pch";
+				INFOPLIST_FILE = "MagnetoMeter/MagnetoMeter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = MagnetoMeter;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AB134BD316E21EA700C7933F /* Build configuration list for PBXProject "MagnetoMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB134C1116E21EA800C7933F /* Debug */,
+				AB134C1216E21EA800C7933F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AB134C1316E21EA800C7933F /* Build configuration list for PBXNativeTarget "MagnetoMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB134C1416E21EA800C7933F /* Debug */,
+				AB134C1516E21EA800C7933F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AB134BD016E21EA700C7933F /* Project object */;
+}
