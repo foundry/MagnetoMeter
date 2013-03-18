@@ -1,6 +1,6 @@
 //
 //  CLMManager.m
-//  BackgroundTracker
+//  Magnet-O-Meter
 //
 //  Created by foundry on 09/03/2013.
 //  Copyright (c) 2013 foundry. All rights reserved.
@@ -43,7 +43,6 @@
 - (CMMotionManager*) motionManager
 {
     if (!_motionManager) {
-        NSLog (@"allocating CMMotionManager..");
         _motionManager = [[CMMotionManager alloc] init];
     }
     return _motionManager;
@@ -52,37 +51,12 @@
 - (CLLocationManager*) locationManager
 {
     if (!_locationManager) {
-        NSLog (@"allocating CLLocationManager..");
     _locationManager = [[CLLocationManager alloc] init];
     }
     return _locationManager;
 }
 
 #pragma mark - CLLocation start/stop
-
-- (void) startLocating
-{
-    CLLocationDistance distanceFilter = 1; //0.1 km
-    CLLocationAccuracy desiredAccuracy = kCLLocationAccuracyBestForNavigation;
-    [self startLocatingWithDistanceFilter:distanceFilter
-                          desiredAccuracy:desiredAccuracy];
-}
-
-- (void) startLocatingWithDistanceFilter:(CLLocationDistance)distanceFilter
-                         desiredAccuracy:(CLLocationAccuracy)desiredAccuracy
-{
-    if ([CLLocationManager locationServicesEnabled]) {
-        NSLog(@"Location services starting...");
-        
-        [self.locationManager startUpdatingLocation];
-    } else {
-        NSLog(@"Location services not enabled");
-        
-    }
-    self.locationManager.distanceFilter = distanceFilter;
-    self.locationManager.desiredAccuracy = desiredAccuracy;
-  
-}
 
 #pragma mark - sharedManager creation
 
@@ -94,12 +68,13 @@
     return self;
 }
 
+
+
+
 + (CLMManager*) sharedManager
 {
-        //BNRios p 193
     static CLMManager* sharedManager = nil;
     if (!sharedManager) {
-        NSLog (@"allocating CLMManager sharedManager..");
         sharedManager = [[super allocWithZone:nil] init];
     }
     return sharedManager;
@@ -109,6 +84,9 @@
 {
     return [self sharedManager];
 }
+
+    //re Singletons see latest discussion at
+    //http://stackoverflow.com/questions/15463761/objective-c-singleton-pattern-in-ios-5
 
 
 

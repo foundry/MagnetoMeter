@@ -30,8 +30,6 @@
 		ABD6D1AE16F2A8C200452ABD /* MagnetometerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD6D1AD16F2A8C200452ABD /* MagnetometerViewController.m */; };
 		ABD90D5C16EA6592002253C9 /* location.db in Resources */ = {isa = PBXBuildFile; fileRef = AB4984AE16E91AC100197D60 /* location.db */; };
 		ABDDF40D16F3A6770092B71F /* UIImage+FillColor.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF40C16F3A6770092B71F /* UIImage+FillColor.m */; };
-		ABDDF41316F4B98E0092B71F /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF41216F4B98E0092B71F /* Circle.m */; };
-		ABDDF41616F4DB950092B71F /* CircleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDDF41516F4DB950092B71F /* CircleLayer.m */; };
 		ABFE81EB16F58A8B00B1DD95 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = ABFE81EA16F58A8B00B1DD95 /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -70,10 +68,6 @@
 		ABD6D1AD16F2A8C200452ABD /* MagnetometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagnetometerViewController.m; sourceTree = "<group>"; };
 		ABDDF40B16F3A6770092B71F /* UIImage+FillColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FillColor.h"; sourceTree = "<group>"; };
 		ABDDF40C16F3A6770092B71F /* UIImage+FillColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FillColor.m"; sourceTree = "<group>"; };
-		ABDDF41116F4B98E0092B71F /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
-		ABDDF41216F4B98E0092B71F /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
-		ABDDF41416F4DB950092B71F /* CircleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayer.h; sourceTree = "<group>"; };
-		ABDDF41516F4DB950092B71F /* CircleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayer.m; sourceTree = "<group>"; };
 		ABFE81EA16F58A8B00B1DD95 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,10 +185,6 @@
 				AB134BF616E21EA800C7933F /* MainStoryboard_iPad.storyboard */,
 				ABB72CA516F36FB800AC6407 /* Arrow.h */,
 				ABB72CA616F36FB800AC6407 /* Arrow.m */,
-				ABDDF41116F4B98E0092B71F /* Circle.h */,
-				ABDDF41216F4B98E0092B71F /* Circle.m */,
-				ABDDF41416F4DB950092B71F /* CircleLayer.h */,
-				ABDDF41516F4DB950092B71F /* CircleLayer.m */,
 				ABDDF40B16F3A6770092B71F /* UIImage+FillColor.h */,
 				ABDDF40C16F3A6770092B71F /* UIImage+FillColor.m */,
 				AB0C1E3C16F39DC1008C88CB /* ForwardProgressView.h */,
@@ -283,8 +273,6 @@
 				AB0C1E3B16F39B8E008C88CB /* InverseProgressView.m in Sources */,
 				AB0C1E3E16F39DC1008C88CB /* ForwardProgressView.m in Sources */,
 				ABDDF40D16F3A6770092B71F /* UIImage+FillColor.m in Sources */,
-				ABDDF41316F4B98E0092B71F /* Circle.m in Sources */,
-				ABDDF41616F4DB950092B71F /* CircleLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,7 +23,7 @@ CMMagnetometer.[x|y|z] raw magentometer data
 PURPLE progress bars  
 show difference between green and blue measures.
 
-This is only accurate on a device positioned horizontally as it only uses the x and y magnetometer readings. The point of this app is to make sense of the Apple API's and to get a feel of how the magnetometer works. We could enhance it by correcting for device tilt - some kind of matrix multiplication with Core Motion's attitude rotation matrix - but we are not trying to demonstrate how to get the _best_ reading (Apple already provides that with their CLHeading `magneticHeading` parameter), but rather to show how the raw figures compare.
+This is only accurate on a device positioned horizontally on a flat surface as it only uses the x and y magnetometer readings. The point of this app is to make sense of the Apple API's and to get a feel of how the magnetometer works. We could enhance it by correcting for device tilt - some kind of matrix multiplication with Core Motion's attitude rotation matrix - but we are not trying to demonstrate how to get the _best_ reading (Apple already provides that with their CLHeading `magneticHeading` parameter), but rather to show how the raw figures compare.
 
 
 
@@ -63,7 +63,7 @@ CMMagnetometer gives us raw data, CMCalibratedMagneticField is adjusted data.
 
 __Difference between Core Motion's CMCalibratedMagneticField and Core Location's CLHeading__ 
 
-The docs are not immediately clear on the difference between 2/ and 3/, so let's do some digging….
+The docs are not immediately clear on the difference between 2/ and 3/, but they do generate different numbers so let's do some digging….
 
 __Core Location framework__   
 __CLHeading__ 
@@ -85,22 +85,16 @@ Here are the relevant `CLHeading` 'raw' properties
     This value represents the [x|y|z]-axis deviation from the magnetic field lines being tracked by the device.
     (_older versions of the docs add:_) The value reported by this property is normalized to the range -128 to +128.
 
-[I am not clear how a microtesla measurement can be 'normalized' (compressed? clipped?) to a range of +/-128 and still represent the unit it claims to measure. Perhaps that's why the sentence was removed from the docs, although the units in most cases seem to conform to this kind of range.] 
-
-
->_CLHeadingComponentValue_   
-A type used to report magnetic differences reported by the onboard hardware. 
-
->     typedef double CLHeadingComponentValue;
+I am not clear how a microtesla measurement can be 'normalized' (compressed? clipped?) to a range of +/-128 and still represent the unit it claims to measure. Perhaps that's why the sentence was removed from the docs. The units on an iPad mini do seem to conform to this kind of range, but the iPhone4S gives _CMMagnetometer_ readings in higher ranges, eg 200-500.
     
 The API clearly expects you to use the derived properties:  
 
     @property(readonly, nonatomic) CLLocationDirection magneticHeading
     @property(readonly, nonatomic) CLLocationDirection trueHeading
 
-which give NSEW compass readings in degrees (0 = North, 180 = South etc). For the true heading, other Core Location services are required (geolocation) to obtain the deviation of magnetic from true north.
+which give stable N/S E/W compass readings in degrees (0 = North, 180 = South etc). For the true heading, other Core Location services are required (geolocation) to obtain the deviation of magnetic from true north.
 
-Here is a snippet from the zCLHeading` header file
+Here is a snippet from the `CLHeading` header file
 
 	/*
 	 *  CLHeading
@@ -109,18 +103,11 @@ Here is a snippet from the zCLHeading` header file
 	 *    Represents a vector pointing to magnetic North constructed from 
 	 *    axis component values x, y, and z. An accuracy of the heading 
 	 *    calculation is also provided along with timestamp information.
-	 */
-	
-
-The x,y and z properties…
-
 	 *  
 	 *  x|y|z
 	 *  Discussion:
 	 *    Returns a raw value for the geomagnetism measured in the [x|y|z]-axis.
 
-
-Note that these are _properties_ - the Core Motion equivalents are contained in a _struct_. Also these are not 'raw data' from the magnetometer, they are filtered values to lose on-device magnetic field bias and local external magnetic fields - so endeavouring to get closer to the earth's geomagnetic field. They are raw in the sense that they are then used to derive the magneticHeading property. 
 
 __Core Motion framework__  
  __CMDeviceMotion__  __CMCalibratedMagneticField__
@@ -187,42 +174,57 @@ Core Motion  _CMCalibratedMagneticField_
  > [represents] Earth's magnetic field _plus surrounding fields_, without device bias
  
  
-So it seems we have:
+So - according to the docs -  we have:
 
-_CMMagnetometer_  
+1/ _CMMagnetometer_  
 Raw readings from the magnetometer
 
-_CMDeviceMotion magneticField_  
-Magnetometer readings corrected for device bias
+2/ _CMDeviceMotion (CMCalibratedMagneticField*) magneticField_  
+Magnetometer readings corrected for device bias (onboard magnetic fields)
 
-_CLHeading_  
-Magnetometer readings corrected for device bias and filtered to eliminate local magnetic fields (as detected by device movement - if the field moves with the device, ignore it; otherwise measure it)
+3/ _CLHeading [x|y|z]_  
+Magnetometer readings corrected for device bias and filtered to eliminate local external magnetic fields (as detected by device movement - if the field moves with the device, ignore it; otherwise measure it)
 
-_Units_  
-x y and z in CMMagnetometer and CMMagneticField are documented as microteslas. But the figures are quite different in each case:
+__Testing the theory__
 
-http://stackoverflow.com/questions/7889698/ios5-low-update-rate-of-clheading-readings-switching-to-coremotion-is-proble
+![enter image description here][1]
 
-There is also a huge discrepancy between CMMagnetometer data levels between iPhone and iPad. The outputs I get on an iPhone4s are a factor of 10 higher than the corresponding outputs on an iPad mini. This variance is only apparent with `CMMagnetometer` raw data. The other units seem to correspond - roughly - across devices (is this the +/-128 'normalization'?). It may be that this huge discrepancy is due to different locally-generated magnetic fields on the devices, and that the units do calibrate: I have no way of checking independently.
+I have put a [Magnet-O-Meter demo app on gitHub](https://github.com/foundry/MagnetoMeter) which displays some of these differences. It's quite revealing to wave a magnet around your device when the app is running and watching how the various APIs react:
 
-In practice there is much more going on here than just measuring sensor output. The `CLHeading magneticHeading` property is far more accurate and stable than any of the other measures. It is also unaffected if you hold the device at weird angles.
+_CMMagnetometer_ doesn't react much to anything unless you pull a rare earth magnet up close. The onboard magnetic fields seem far more significant than local external fields or the earth's magnetic field. On my iPhone 4S it consistently points to the bottom left of the device; on the iPad mini it points usually to the top right.
 
-Of `CMCalibratedMagneticField` and `CLHeading` component x y and z values, the former appears to be slightly more accurate and more stable than the latter, although I haven't tested these extensively in different environments. `CLHeading`  seems to be much more sensitive to local magnetic fields than `CMCalibratedMagneticField`, which is surprising, as the docs suggest that these are filtered out in `CLHeading`, but not filtered out in `CMCalibratedMagneticField`.
+_CLHeading.[x|y|z]_  is the most vulnerable to local external fields, whether moving or static relative to the device.  
 
-I have put a [Magnet-O-Meter demo app on gitHub](https://github.com/foundry/MagnetoMeter) which demonstrates some of these differences. It's quite interesting waving magnets around your device when the app is running and watching how the various APIs react:
-
-_CMMagnetometer_ doesn't react much to anything. The onboard magnetic fields are clearly far more significant than local external magnets, let alone the earth's magnetic file. On my iPhone 4S it consistently points to the top of the device; on the iPad mini it points always to the right edge of the device.  
-_CLHeading.[x|y|z]_  is the most vulnerable to local external fields, whether moving or static relative to the device, which seems to contradict the docs somewhat.  
- (CMDevice)_CMCalibratedMagneticField_ is the most stready in the face of varying external fields, but otherwise tracks _CLHeading.[x|y|z]_ pretty closely.  
-_CLHeading.magneticHeading_ - Apple's recommendation for magnetic compass reading -  is far more stable than any of these. It's obviously using data from the other sensors to make more sense of the magnetometer data.
-
-What approach should you take? Based on my limited testing, I would suggest…  
-1 - CLHeading's `magneticHeading` and `trueHeading` will give you the most accurate and most stable compass reading.  
-2 - CMDeviceMotion's `CMCalibratedMagneticField` seems to be the next most desirable, although considerably less stable and accurate than `magneticHeading`.  
-3 - CLHeading's 'raw' x y and z properties, but these are easily distracted by local magnetic fields.  
-4 - Raw magnetometer data from CMMagnetometer. There is really not much point using this unless you are prepared to do tons of filtering, as it is detecting too much data from magnetic fields generated by the device itself.  
+(CMDevice)_CMCalibratedMagneticField_ is the most steady in the face of varying external fields, but otherwise tracks it's Core Location counterpart _CLHeading.[x|y|z]_ pretty closely.  
+ 
+_CLHeading.magneticHeading_ - Apple's recommendation for magnetic compass reading -  is far more stable than any of these. It is using data from the other sensors to stabilise the magnetometer data. But you don't get a raw breakdown of x,y,z
 
 
+                 influenced by
+	             onboard fields    local external fields   earth's field
+	yellow               X                   X                 X
+	green                _                   X                 X
+	blue                 _                   _                 X
+	red                  _                   _                 X           
+
+ yellow _CMMagnetometer_  
+ green _CLHeading.[x|y|z]_  
+ blue _CMCalibratedMagneticField_  
+ red _CLHeading.magneticHeading_  
+ 
+ This does seem to contradict the docs, which suggest that _CLHeading.[x|y|z]_ should be less influenced by local external fields than _CMCalibratedMagneticField_.
+ 
+ 
+ What approach should you take? Based on my limited testing, I would suggest…  
+_If you want a compass reading_  
+CLHeading's `magneticHeading` and `trueHeading` will give you the most accurate and most stable compass reading.  
+_If you need to avoid Core Location_  
+CMDeviceMotion's `CMCalibratedMagneticField` seems to be the next most desirable, although considerably less stable and accurate than `magneticHeading`.  
+_If you are interested in local magnetic fields_  
+CLHeading's 'raw' x y and z properties seem to be more sensitive to local magnetic fields.  
+_If you want all of the  data including onboard magnetic fields_  
+Raw magnetometer data from CMMagnetometer. There is really not much point using this unless you are prepared to do tons of filtering, as it is hugely influenced by magnetic fields generated on the device itself.  
 	 
 
-	
+
+  [1]: http://i.stack.imgur.com/32Tgu.png

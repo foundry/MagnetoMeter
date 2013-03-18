@@ -1,6 +1,6 @@
 //
 //  MagnetometerViewController.m
-//  BackgroundTracker
+//  Magnet-O-Meter
 //
 //  Created by foundry on 15/03/2013.
 //  Copyright (c) 2013 foundry. All rights reserved.
@@ -9,7 +9,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "MagnetometerViewController.h"
 #import "Arrow.h"
-#import "Circle.h"
+    //#import "Circle.h"
 #import "ForwardProgressView.h"
 #import "InverseProgressView.h"
 #import "UIImage+FillColor.h"
@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet Arrow *arrow2;
 @property (weak, nonatomic) IBOutlet Arrow *arrow3;
 @property (weak, nonatomic) IBOutlet Arrow *arrow4;
-@property (weak, nonatomic) IBOutlet Circle *circle;
+    //@property (weak, nonatomic) IBOutlet Circle *circle;
 
 @property (weak, nonatomic) IBOutlet UIProgressView *clMagneticHeadingBarX;
 @property (weak, nonatomic) IBOutlet UIProgressView *clMagneticHeadingBar_X;
@@ -105,82 +105,98 @@
 {
     [super viewDidLoad];
     
-        //arrow1 (red) -   -heading.magneticHeading;
-    [self.arrow setFillColor:[UIColor colorWithRed:0.8
-                                             green:0.1
-                                              blue:0.1
-                                             alpha:0.1]];
+                    CGFloat strongTone = 0.80;
+                      CGFloat weakTone = 0.10;
+                         CGFloat alpha = 0.10;
     
-        //arrow2 (green) - pitch
-    [self.arrow2 setFillColor:[UIColor colorWithRed:0.1
-                                             green:0.8
-                                              blue:0.1
-                                             alpha:0.1]];
+                          //arrow1(red):clHeading.magneticHeading;
+               [self.arrow setFillColor:
+                  [UIColor colorWithRed:strongTone
+                                  green:weakTone
+                                   blue:weakTone
+                                  alpha:alpha]];
     
-        //arrow3 (blue) - pitch + heading
-    [self.arrow3 setFillColor:[UIColor colorWithRed:0.1
-                                             green:0.1
-                                              blue:0.8
-                                             alpha:0.1]];
+                        //arrow2(green):clHeading.xyz
+              [self.arrow2 setFillColor:
+                  [UIColor colorWithRed:weakTone
+                                  green:strongTone
+                                   blue:weakTone
+                                  alpha:alpha]];
     
-        //arrow4 (yellow) - heading calc from CMMagneticField.field
-    [self.arrow4 setFillColor:[UIColor colorWithRed:0.8
-                                             green:0.8
-                                              blue:0.1
-                                             alpha:0.1]];
-    UIColor* foreColor; UIColor* backColor;
+                        //arrow3(blue):cmCalibratedMagneticField
+             [self.arrow3 setFillColor:
+                 [UIColor colorWithRed:weakTone
+                                 green:weakTone
+                                  blue:strongTone
+                                 alpha:alpha]];
     
-    CGFloat strongTone = 0.90;
-    CGFloat weakTone = 0.70;
-    backColor = [UIColor colorWithWhite:strongTone
-                                  alpha:1.0];
-    
-    foreColor = [UIColor colorWithRed:strongTone
-                                green:weakTone
-                                 blue:weakTone
-                                alpha:1.0];
-    [self colorProgressViews:self.clMagneticHeadingCollection
-                   foreColor:foreColor
-                   backColor:backColor];
-    
-    
-    foreColor = [UIColor colorWithRed:strongTone
+                      //arrow4(yellow):cmMagnetometer
+            [self.arrow4 setFillColor:
+                [UIColor colorWithRed:strongTone
                                 green:strongTone
                                  blue:weakTone
-                                alpha:1.0];
-    [self colorProgressViews:self.cmMagneticCollection
-                   foreColor:foreColor
-                   backColor:backColor];
+                                alpha:alpha]];
+                        
+                         strongTone = 0.90;
+                           weakTone = 0.70;
+                              alpha = 1.0;
+                        
+                 UIColor* backColor =
+             [UIColor colorWithWhite:strongTone
+                               alpha:alpha];
+
+            [self colorProgressViews:self.clMagneticHeadingCollection
+                           backColor:backColor
+                           foreColor:
+               [UIColor colorWithRed:strongTone
+                               green:weakTone
+                                blue:weakTone
+                               alpha:alpha]
+             ];
+    
+            [self colorProgressViews:self.cmMagneticCollection
+                           backColor:backColor
+                           foreColor:
+               [UIColor colorWithRed:strongTone
+                               green:strongTone
+                                blue:weakTone
+                               alpha:alpha]
+             ];
+
  
-       
-    foreColor = [UIColor colorWithRed:weakTone
-                                green:weakTone
-                                 blue:strongTone
-                                alpha:1.0];
-    
-    [self colorProgressViews:self.cmCalibratedMagneticFieldCollection
-                   foreColor:foreColor
-                   backColor:backColor];
-    foreColor = [UIColor colorWithRed:weakTone
-                                green:strongTone
-                                 blue:weakTone
-                                alpha:1.0];
-    [self colorProgressViews:self.clHeadingCollection
-                   foreColor:foreColor
-                   backColor:backColor];
-    foreColor = [UIColor colorWithRed:strongTone
-                                green:weakTone
-                                 blue:strongTone
-                                alpha:1.0];
-    [self colorProgressViews:self.diffCollection
-                   foreColor:foreColor
-                   backColor:backColor];
+            [self colorProgressViews:self.cmCalibratedMagneticFieldCollection
+                           backColor:backColor
+                           foreColor:
+              [UIColor colorWithRed:weakTone
+                              green:weakTone
+                               blue:strongTone
+                              alpha:alpha]
+             ];
+
+           [self colorProgressViews:self.clHeadingCollection
+                          backColor:backColor
+                          foreColor:
+              [UIColor colorWithRed:weakTone
+                              green:strongTone
+                               blue:weakTone
+                              alpha:alpha]
+             ];
+            
+
+           [self colorProgressViews:self.diffCollection
+                          backColor:backColor
+                          foreColor:
+              [UIColor colorWithRed:strongTone
+                              green:weakTone
+                               blue:strongTone
+                              alpha:alpha]
+             ];
 
 }
 
 - (void) colorProgressViews:(NSArray*)viewCollection
-                  foreColor:(UIColor*)foreColor
                   backColor:(UIColor*)backColor
+                  foreColor:(UIColor*)foreColor
 {
     UIImage* foreImage; UIImage*  backImage;
 
@@ -200,19 +216,33 @@
     }
 
 }
+
+- (CGFloat) adjustForTilt:(CGFloat)tilt
+                     vec1:(CGFloat)vec1
+                     vec2:(CGFloat)vec2
+{
+        // int sign = (vec1<0)? -1: 1;
+        int sign = 1;
+    CGFloat result = 0;
+    tilt = (ABS(tilt/1.5)); //normalised tilt
+    vec1 *= 1-tilt;
+    vec2 *= tilt;
+    result = sign*sqrtf(vec1*vec1+vec2*vec2);
+
+    return result;
+}
 - (CGFloat) rawHeadingFromX:(CGFloat)xVec Y:(CGFloat)yVec
 {
     
     /*
-     to obtain this X and Y we really need to use the original mag XYZ and do some kind of matrix multiplication with the rotation matrix for the device 
-     
-     
+     to obtain this X and Y we really need to use the original mag XYZ and do some kind of matrix multiplication with the rotation matrix for the device.
+     Here we are only using the original X and Y values, so this only works if the device is held flat.
      */
     
         //http://stackoverflow.com/questions/11383968/which-ios-class-code-returns-the-magnetic-north/11384054#11384054
         //http://www51.honeywell.com/aero/common/documents/myaerospacecatalog-documents/Defense_Brochures-documents/Magnetic__Literature_Application_notes-documents/AN203_Compass_Heading_Using_Magnetometers.pdf
     
-    CGFloat rawHeading;
+    CGFloat rawHeading = 0;
     if (yVec > 0) rawHeading = 90.0 - atan(xVec/yVec)*180.0/M_PI;
     if (yVec < 0) rawHeading = 270.0 - atan(xVec/yVec)*180.0/M_PI;
     if (yVec == 0 && xVec < 0) rawHeading = 180.0;
@@ -220,6 +250,8 @@
     rawHeading -=90;
     return rawHeading;
 }
+
+#pragma mark updateMotion
 
 #define DELTA 128 
 #define ACCUDELTA 180
@@ -230,38 +262,52 @@
     CMMagnetometerData* magnetometerData = self.motionManager.magnetometerData;
     CMDeviceMotion* motion = self.motionManager.deviceMotion;
     CLHeading* heading = self.locationManager.heading;
-        //arrow
-    if (self.circle.scale != heading.headingAccuracy/ACCUDELTA) {
-        
-            //animate a CAShapeLayer here
-        
-            //self.circle.scale = heading.headingAccuracy/ACCUDELTA;
-        [self.circle animateRadius:heading.headingAccuracy/ACCUDELTA];
-            //[self.circle setNeedsDisplay];
-    }
+    CATransform3D transform;
+    
+#pragma mark update arrow 1 - CL Magnetic Heading
+        //red arrow
     
     CGFloat hAngle =  -heading.magneticHeading;
-    CGFloat pitch = -motion.attitude.pitch;
+        //CGFloat pitch = -motion.attitude.pitch;
     CGFloat xVec, yVec, zVec, rawHeading, rawHeadingAngle;
 
     CATransform3D hRotate = CATransform3DMakeRotation([[self class] degreesToRadians:hAngle], 0, 0, 1);
-    CATransform3D pRotate = CATransform3DMakeRotation(pitch, 1, 0, 0);
 
-    self.arrow.layer.transform = hRotate;
- 
-    CATransform3D transform = CATransform3DConcat(hRotate, pRotate);
+    self.arrow.layer.transform = hRotate;  //red arrow
+        //CATransform3D pRotate = CATransform3DMakeRotation(pitch, 1, 0, 0);
+        // CATransform3D transform = CATransform3DConcat(hRotate, pRotate);
     
+#pragma mark update arrow 2 - CL Heading [x|y|x]
+        //green arrow
+
     xVec = [[self class] degreesToRadians:heading.x];
     yVec = [[self class] degreesToRadians:heading.y];
     zVec = [[self class] degreesToRadians:heading.z];
+    
+        // xVec = [self adjustForTilt:motion.attitude.roll vec1:xVec vec2:zVec];
+        //NSLog (@"input yVec %.2f",yVec);
+    
+        //yVec = [self adjustForTilt:motion.attitude.pitch vec1:yVec vec2:zVec];
+    
+    /*
+     matrix experiments
+    vec3f_t headingVec = {xVec,yVec,zVec};
+    vec3f_t tiltedVec;
+    multiplyMatrixAndVector(tiltedVec, motion.attitude.rotationMatrix, headingVec);
+    */
+        // NSLog (@"      output yVec %.2f",tiltedVec[1]);
+    
+        //rawHeading = [self rawHeadingFromX:tiltedVec[0] Y:tiltedVec[1]];
     rawHeading = [self rawHeadingFromX:xVec Y:yVec];
     
     rawHeadingAngle = -[[self class] degreesToRadians:rawHeading];
     transform = CATransform3DMakeRotation(rawHeadingAngle, 0, 0, 1);
     
-    self.arrow2.layer.transform = transform;
+    self.arrow2.layer.transform = transform; //green arrow
 
- 
+#pragma mark update arrow 3 - CMCalibratedMagneticField 
+        //blue arrow
+    
      xVec = [[self class] degreesToRadians:motion.magneticField.field.x];
      yVec = [[self class] degreesToRadians:motion.magneticField.field.y];
      zVec = [[self class] degreesToRadians:motion.magneticField.field.z];
@@ -270,9 +316,12 @@
      rawHeadingAngle = -[[self class] degreesToRadians:rawHeading];
     transform = CATransform3DMakeRotation(rawHeadingAngle, 0, 0, 1);
     
-    self.arrow3.layer.transform = transform;
+    self.arrow3.layer.transform = transform; //blue arrow
  
-    
+
+#pragma mark update arrow 4 - CM RAW magnetometerData
+    //yellow arrow
+
      xVec = [[self class] degreesToRadians:magnetometerData.magneticField.x];
      yVec = [[self class] degreesToRadians:magnetometerData.magneticField.y];
      zVec = [[self class] degreesToRadians:magnetometerData.magneticField.z];
@@ -281,8 +330,10 @@
      rawHeadingAngle = -[[self class] degreesToRadians:rawHeading];
     transform = CATransform3DMakeRotation(rawHeadingAngle, 0, 0, 1);
     
-    self.arrow4.layer.transform = transform;
+    self.arrow4.layer.transform = transform; //yellow arrow
  
+#pragma mark  update progress bars
+    
     CGFloat xData,yData,zData;
     xData = heading.magneticHeading<180?-heading.magneticHeading:360-heading.magneticHeading;
     yData = 0;
@@ -392,51 +443,46 @@
 
 - (void) pullMotionAdditions
 {
-    [self.motionManager startMagnetometerUpdates];
+NSLog (@" %@",NSStringFromSelector(_cmd));
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     self.locationManager.distanceFilter = 0.0001;
     self.locationManager.headingFilter = kCLHeadingFilterNone;
-    [self.locationManager startUpdatingHeading];
-    [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXTrueNorthZVertical];
-
-
-}
-
-- (void) pullBufferMotion:(NSTimer*)timer {
-    
+    if ([CLLocationManager headingAvailable]) {
+        [self.locationManager startUpdatingHeading];
+    }
+    if (self.motionManager.magnetometerAvailable) {
+        [self.motionManager startMagnetometerUpdates];
+    }
+    if (self.motionManager.deviceMotionAvailable) {
+        [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXMagneticNorthZVertical];
+    }
 }
 
 - (void)pushMotionAdditions
 {
+    NSLog (@" %@",NSStringFromSelector(_cmd));
+
+    self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    self.locationManager.distanceFilter = 0.0001;
+    self.locationManager.headingFilter = kCLHeadingFilterNone;
+    if ([CLLocationManager headingAvailable]) {
+        [self.locationManager startUpdatingHeading];
+    }
+
     self.motionManager.deviceMotionUpdateInterval = self.samplingFrequency;
     [self.sampleQueue  setMaxConcurrentOperationCount:1];
     
     if (self.motionManager.magnetometerAvailable) {
-        
         [self.motionManager startMagnetometerUpdatesToQueue:self.sampleQueue
-                                                withHandler:^(CMMagnetometerData *magnetometerData, NSError *error)
-         {
-         
-         }];
-    }
-    
+                                                withHandler:nil];
+         }
     if (self.motionManager.deviceMotionAvailable) {
-        
         NSLog (@"updateInterval %f",self.motionManager.deviceMotionUpdateInterval);
-        [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryCorrectedZVertical
+        [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXMagneticNorthZVertical
                                                                 toQueue:self.sampleQueue
-                                                            withHandler:^(CMDeviceMotion *motion, NSError *error)
-         {
-         
-         }];
-
-        
-        
-              
+                                                            withHandler:nil];
     }
 }
-
-
 
 - (void)viewDidUnload {
     [self setArrow:nil];

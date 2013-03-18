@@ -1,6 +1,6 @@
 //
 //  CLMManager.h
-//  BackgroundTracker
+//  Magnet-O-Meter
 //
 //  Created by foundry on 09/03/2013.
 //  Copyright (c) 2013 foundry. All rights reserved.
@@ -14,10 +14,6 @@
 
 @property (nonatomic, strong) CMMotionManager* motionManager;
 @property (nonatomic, strong) CLLocationManager* locationManager;
-
-- (void) startLocating;
-- (void) startLocatingWithDistanceFilter:(CLLocationDistance)distanceFilter
-                         desiredAccuracy:(CLLocationAccuracy)desiredAccuracy;
 
 + (CLMManager*) sharedManager;
 
