@@ -7,7 +7,7 @@ Demonstrates the various ways of getting Magnetometer and compass data.
 Compatible with iPhone, iPad, iOS 5.1+
 BEST on iPad as the interface is pretty crowded.
 
-This is posted to support a lengthy Stack Overflow answer
+This is posted to support a lengthy [Stack Overflow answer](http://stackoverflow.com/questions/15380632/in-ios-what-is-the-difference-between-the-magnetic-field-values-from-the-core-l)
 
 It is hastily pulled from a larger app, hence the odd bit of code cruft around the edges...
 
@@ -23,7 +23,7 @@ BLUE arrow and progress bars
 CMDevice.calibratedMagneticField.field  
 YELLOW arrow and progress bars  
 CMMagnetometer.[x|y|z] raw magentometer data  
-PURPLE progress bars  
+MAGENTA progress bars  
 show difference between green and blue measures.
 
 This is only accurate on a device positioned horizontally on a flat surface as it only uses the x and y magnetometer readings. The point of this app is to make sense of the Apple API's and to get a feel of how the magnetometer works. We could enhance it by correcting for device tilt - some kind of matrix multiplication with Core Motion's attitude rotation matrix - but we are not trying to demonstrate how to get the _best_ reading (Apple already provides that with their CLHeading `magneticHeading` parameter), but rather to show how the raw figures compare.
