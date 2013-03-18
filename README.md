@@ -11,6 +11,9 @@ This is posted to support a lengthy Stack Overflow answer
 
 It is hastily pulled from a larger app, hence the odd bit of code cruft around the edges...
 
+![enter image description here][1]
+
+
 __interface__   
 RED arrow  
 showing CLHeading.magneticHeading - the iOS 'compass' measure  
@@ -187,7 +190,6 @@ Magnetometer readings corrected for device bias and filtered to eliminate local 
 
 __Testing the theory__
 
-![enter image description here][1]
 
 I have put a [Magnet-O-Meter demo app on gitHub](https://github.com/foundry/MagnetoMeter) which displays some of these differences. It's quite revealing to wave a magnet around your device when the app is running and watching how the various APIs react:
 
