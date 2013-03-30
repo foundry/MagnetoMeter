@@ -55,12 +55,20 @@ __Difference between Core Motion's CMMagnetometer and CMCalibratedMagneticField_
 
 1/ and 2/ - both from the Core Motion framework - differ as follows:
 
-CMDeviceMotion Class Reference
+_CMDeviceMotion Class Reference_
 
     @property(readonly, nonatomic) CMCalibratedMagneticField magneticField
 
 >Discussion  
 >The CMCalibratedMagneticField returned by this property gives you the total magnetic field in the device’s vicinity without device bias. Unlike the magneticField property of the CMMagnetometer class, these values reflect the earth’s magnetic field plus surrounding fields, minus device bias.
+
+_CMMagnetometerData class reference_
+
+      @property(readonly, nonatomic) CMMagneticField magneticField
+>Discussion
+>The value of this property is the total magnetic field observed by the device which is equal to the Earth’s geomagnetic field plus bias introduced from the device itself and its surroundings.
+
+>This is the “raw” magnetic-field value, unlike the calibrated value of the magneticField property of CMDeviceMotion which filters out the bias introduced by the device and, _in some cases_ [my italics], its surrounding fields.
 
 CMMagnetometer gives us raw data, CMCalibratedMagneticField is adjusted data.
 
