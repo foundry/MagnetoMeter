@@ -8,6 +8,10 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (FillColor)
-+ (UIImage*) fillImgOfSize:(CGSize)img_size withColor:(UIColor*)img_color;
++ (UIImage*) fillImgOfSize:(CGSize)img_size
+                 withColor:(UIColor*)img_color;
 
++ (UIImage*) fillImgOfSize:(CGSize)img_size
+                 withColor:(UIColor*)img_color
+              cornerRadius:(CGFloat)cornerRadius;
 @end
