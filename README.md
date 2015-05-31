@@ -4,7 +4,9 @@ Magnetometer test app
 
 Demonstrates the various ways of getting Magnetometer and compass data.
 
-Compatible with iPhone, iPad, iOS 5.1+
+Compatible with iPhone, iPad, iOS 5.1+  
+_updated_ for iOS7, iOS8 with changes for [UIProgressBar custom image bug](http://stackoverflow.com/questions/22311516/uiprogressview-custom-track-and-progress-images-in-ios-7-1)
+
 BEST on iPad as the interface is pretty crowded.
 
 This is posted to support a lengthy [Stack Overflow answer](http://stackoverflow.com/questions/15380632/in-ios-what-is-the-difference-between-the-magnetic-field-values-from-the-core-l)
