@@ -105,116 +105,123 @@
 {
     [super viewDidLoad];
     
-                    CGFloat strongTone = 0.80;
-                      CGFloat weakTone = 0.10;
-                         CGFloat alpha = 0.10;
+    CGFloat strongTone = 0.80;
+    CGFloat midTone = 0.40;
+    CGFloat weakTone = 0.10;
+    CGFloat alpha = 0.20;
     
-                          //arrow1(red):clHeading.magneticHeading;
-               [self.arrow setFillColor:
-                  [UIColor colorWithRed:strongTone
-                                  green:weakTone
-                                   blue:weakTone
-                                  alpha:alpha]];
+    //arrow1(red):clHeading.magneticHeading;
+    [self.arrow setFillColor:
+     [UIColor colorWithRed:strongTone
+                     green:weakTone
+                      blue:weakTone
+                     alpha:alpha]];
     
-                        //arrow2(green):clHeading.xyz
-              [self.arrow2 setFillColor:
-                  [UIColor colorWithRed:weakTone
-                                  green:strongTone
-                                   blue:weakTone
-                                  alpha:alpha]];
+    //arrow2(green):clHeading.xyz
+    [self.arrow2 setFillColor:
+     [UIColor colorWithRed:weakTone
+                     green:strongTone
+                      blue:weakTone
+                     alpha:alpha]];
     
-                        //arrow3(blue):cmCalibratedMagneticField
-             [self.arrow3 setFillColor:
-                 [UIColor colorWithRed:weakTone
-                                 green:weakTone
-                                  blue:strongTone
-                                 alpha:alpha]];
+    //arrow3(blue):cmCalibratedMagneticField
+    [self.arrow3 setFillColor:
+     [UIColor colorWithRed:weakTone
+                     green:midTone
+                      blue:strongTone
+                     alpha:alpha]];
     
-                      //arrow4(yellow):cmMagnetometer
-            [self.arrow4 setFillColor:
-                [UIColor colorWithRed:strongTone
-                                green:strongTone
-                                 blue:weakTone
-                                alpha:alpha]];
-                        
-                         strongTone = 0.90;
-                           weakTone = 0.70;
-                              alpha = 1.0;
-                        
-                 UIColor* backColor =
-             [UIColor colorWithWhite:strongTone
-                               alpha:alpha];
-
-            [self colorProgressViews:self.clMagneticHeadingCollection
-                           backColor:backColor
-                           foreColor:
-               [UIColor colorWithRed:strongTone
-                               green:weakTone
-                                blue:weakTone
-                               alpha:alpha]
-             ];
+    //arrow4(yellow):cmMagnetometer
+    [self.arrow4 setFillColor:
+     [UIColor colorWithRed:strongTone
+                     green:strongTone
+                      blue:weakTone
+                     alpha:alpha]];
     
-            [self colorProgressViews:self.cmMagneticCollection
-                           backColor:backColor
-                           foreColor:
-               [UIColor colorWithRed:strongTone
-                               green:strongTone
-                                blue:weakTone
-                               alpha:alpha]
-             ];
-
- 
-            [self colorProgressViews:self.cmCalibratedMagneticFieldCollection
-                           backColor:backColor
-                           foreColor:
-              [UIColor colorWithRed:weakTone
-                              green:weakTone
-                               blue:strongTone
-                              alpha:alpha]
-             ];
-
-           [self colorProgressViews:self.clHeadingCollection
-                          backColor:backColor
-                          foreColor:
-              [UIColor colorWithRed:weakTone
-                              green:strongTone
-                               blue:weakTone
-                              alpha:alpha]
-             ];
-            
-
-           [self colorProgressViews:self.diffCollection
-                          backColor:backColor
-                          foreColor:
-              [UIColor colorWithRed:strongTone
-                              green:weakTone
-                               blue:strongTone
-                              alpha:alpha]
-             ];
-
+    strongTone = 0.95;
+    midTone = 0.6;
+    weakTone = 0.2;
+    alpha = 0.95;
+    
+    UIColor* backColor =
+    [UIColor colorWithWhite:1.0
+                      alpha:alpha];
+    
+    [self colorProgressViews:self.clMagneticHeadingCollection
+                   backColor:backColor
+                   foreColor:
+     [UIColor colorWithRed:strongTone
+                     green:midTone
+                      blue:midTone
+                     alpha:alpha]
+     ];
+    
+    [self colorProgressViews:self.cmMagneticCollection
+                   backColor:backColor
+                   foreColor:
+     [UIColor colorWithRed:strongTone
+                     green:strongTone
+                      blue:weakTone
+                     alpha:alpha]
+     ];
+    
+    
+    [self colorProgressViews:self.cmCalibratedMagneticFieldCollection
+                   backColor:backColor
+                   foreColor:
+     [UIColor colorWithRed:weakTone
+                     green:midTone
+                      blue:strongTone
+                     alpha:alpha]
+     ];
+    
+    [self colorProgressViews:self.clHeadingCollection
+                   backColor:backColor
+                   foreColor:
+     [UIColor colorWithRed:weakTone
+                     green:strongTone
+                      blue:midTone
+                     alpha:alpha]
+     ];
+    
+    
+    [self colorProgressViews:self.diffCollection
+                   backColor:backColor
+                   foreColor:
+     [UIColor colorWithRed:strongTone
+                     green:midTone
+                      blue:strongTone
+                     alpha:alpha]
+     ];
+    
 }
 
 - (void) colorProgressViews:(NSArray*)viewCollection
                   backColor:(UIColor*)backColor
                   foreColor:(UIColor*)foreColor
 {
-    UIImage* foreImage; UIImage*  backImage;
-
-    backImage   = [UIImage fillImgOfSize:(CGSize){10,10}
-                               withColor:backColor];
-    foreImage   = [UIImage fillImgOfSize:(CGSize){10,10}
-                               withColor:foreColor];
-
+    /*
+     for previous versions we were using cusom trackImage and progressImage,
+     but there is a bug in iOS7+ that breaks these
+     http://stackoverflow.com/questions/22311516/uiprogressview-custom-track-and-progress-images-in-ios-7-1
+     
+     so now we use progressTintColor and trackTintColor
+     (and thicken up the bar also, it is _too_ thin in iOS7)
+     */
+    
     for (UIProgressView* pView in viewCollection) {
+        [pView setTransform:CGAffineTransformMakeScale(1.0, 2.0)];
         if ([pView isKindOfClass:[InverseProgressView class]]) {
-            [pView setProgressImage:backImage];
-            [pView setTrackImage:foreImage];
+            pView.transform = CGAffineTransformTranslate(pView.transform, 1.0, 2);
+            [pView setProgressTintColor:backColor];
+            [pView setTrackTintColor:foreColor];
         } else {
-            [pView setProgressImage:foreImage];
-            [pView setTrackImage:backImage];
+            pView.transform = CGAffineTransformTranslate(pView.transform, -1.0, 2);
+            [pView setProgressTintColor:foreColor];
+            [pView setTrackTintColor:backColor];
         }
     }
-
+    
 }
 
 - (CGFloat) adjustForTilt:(CGFloat)tilt
