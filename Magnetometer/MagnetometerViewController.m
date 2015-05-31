@@ -141,7 +141,7 @@
     strongTone = 0.95;
     midTone = 0.6;
     weakTone = 0.2;
-    alpha = 0.95;
+    alpha = 1.0;
     
     UIColor* backColor =
     [UIColor colorWithWhite:1.0
