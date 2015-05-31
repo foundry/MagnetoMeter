@@ -108,7 +108,7 @@ const CGFloat kMyViewHeight = 240.0;
     else color = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:1.0f];
    
     [color setStroke];
-    CGContextSetLineWidth(context, stroke);
+    CGContextSetLineWidth(context, alignStroke);
     CGContextSetLineCap(context, kCGLineCapSquare);
     CGContextAddPath(context, path);
     CGContextStrokePath(context);
