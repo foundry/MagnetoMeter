@@ -98,9 +98,7 @@
         [self.defaults setBool:NO forKey:PUSH_TRACKING];
     }
     NSLog(@"self.pushTracking %d",self.pushTracking);
-    for (UIButton* button in self.buttonCollection) {
-    }
-    
+
     if (self.pushTracking) {
         [self pushMotion];
     } else {
