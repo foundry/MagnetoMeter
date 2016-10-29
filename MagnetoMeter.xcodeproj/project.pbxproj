@@ -226,6 +226,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = foundry;
+				TargetAttributes = {
+					AB134BD716E21EA700C7933F = {
+						DevelopmentTeam = 2Y9BM25FS4;
+					};
+				};
 			};
 			buildConfigurationList = AB134BD316E21EA700C7933F /* Build configuration list for PBXProject "MagnetoMeter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -373,10 +378,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 2Y9BM25FS4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MagnetoMeter/MagnetoMeter-Prefix.pch";
 				INFOPLIST_FILE = "MagnetoMeter/MagnetoMeter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = MagnetoMeter;
 				WRAPPER_EXTENSION = app;
 			};
@@ -387,10 +393,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 2Y9BM25FS4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MagnetoMeter/MagnetoMeter-Prefix.pch";
 				INFOPLIST_FILE = "MagnetoMeter/MagnetoMeter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = MagnetoMeter;
 				WRAPPER_EXTENSION = app;
 			};

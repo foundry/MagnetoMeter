@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="YXT-Zd-ukw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" variant="6xAndEarlier" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="YXT-Zd-ukw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1296" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
-        <!--Magnetometer View Controller - Magnetometer-->
+        <!--Magnetometer-->
         <scene sceneID="bgM-mD-5gq">
             <objects>
                 <viewController id="YXT-Zd-ukw" customClass="MagnetometerViewController" sceneMemberID="viewController">
@@ -39,11 +41,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Fnl-QD-Ehd" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="I15-oE-FMr" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -82,11 +84,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="FiI-2I-KQT" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="6LX-OS-8iW" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -111,11 +113,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="cSk-KG-GPV" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="rvb-AP-r2e" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -140,7 +142,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="gMj-sq-GW9" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="mzU-Wr-HVx" customClass="ForwardProgressView">
@@ -176,11 +178,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="usY-ZJ-qoM" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="2gM-nD-U6f" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -212,11 +214,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="5WE-48-ihF" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="tn8-8G-9Zu" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -241,11 +243,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="KvX-fe-VHc" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="AiD-qx-FZL" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -270,7 +272,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="dRg-wY-Ip3" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="M5k-7X-stc" customClass="ForwardProgressView">
@@ -306,11 +308,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="KVy-0q-Xhn" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Vgv-ub-Pge" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -342,11 +344,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Noq-J4-SqI" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Z3j-Fi-lpw" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -371,11 +373,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="GHh-JC-YNw" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Yel-3q-GCj" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -400,7 +402,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="njF-az-dyc" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Uw6-t2-48n" customClass="ForwardProgressView">
@@ -436,11 +438,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="oTF-ne-IPx" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="il3-7X-E0U" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -472,11 +474,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="2mP-of-KsZ" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="ylh-kY-6bF" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -501,11 +503,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="Q94-zT-XZG" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="plo-Dh-RpJ" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -530,7 +532,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="sM2-pf-6AT" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="MWI-7y-DsP" customClass="ForwardProgressView">
@@ -566,11 +568,11 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="9DC-Lj-dtZ" customClass="InverseProgressView">
-                                                        <rect key="frame" x="70" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="70" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" progress="0.5" id="NNl-r0-Q8Z" customClass="ForwardProgressView">
-                                                        <rect key="frame" x="310" y="5.5" width="240" height="9"/>
+                                                        <rect key="frame" x="310" y="6" width="240" height="9"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     </progressView>
                                                 </subviews>
@@ -703,92 +705,12 @@
             <point key="canvasLocation" x="890" y="-501"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="Arrow" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/Arrow.h"/>
-        </class>
-        <class className="ForwardProgressView" superclassName="UIProgressView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ForwardProgressView.h"/>
-        </class>
-        <class className="InverseProgressView" superclassName="UIProgressView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/InverseProgressView.h"/>
-        </class>
-        <class className="MagnetometerViewController" superclassName="MotionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MagnetometerViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="arrow" candidateClass="Arrow"/>
-                <relationship kind="outlet" name="arrow2" candidateClass="Arrow"/>
-                <relationship kind="outlet" name="arrow3" candidateClass="Arrow"/>
-                <relationship kind="outlet" name="arrow4" candidateClass="Arrow"/>
-                <relationship kind="outlet" name="circle" candidateClass="Circle"/>
-                <relationship kind="outlet" name="clHeadingBarS" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBarX" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBarY" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBarZ" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBar_S" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBar_X" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBar_Y" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingBar_Z" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clHeadingLabelS" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="clHeadingLabelX" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="clHeadingLabelY" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="clHeadingLabelZ" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="clMagneticHeadingBarX" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clMagneticHeadingBar_X" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="clMagneticHeadingLabelX" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBarS" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBarX" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBarY" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBarZ" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBar_S" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBar_X" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBar_Y" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldBar_Z" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldLabelS" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldLabelX" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldLabelY" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmCalibratedMagneticFieldLabelZ" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmMagneticFieldBarS" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBarX" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBarY" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBarZ" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBar_S" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBar_X" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBar_Y" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldBar_Z" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="cmMagneticFieldLabelS" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmMagneticFieldLabelX" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmMagneticFieldLabelY" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="cmMagneticFieldLabelZ" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="diffBarS" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBarX" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBarY" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBarZ" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBar_S" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBar_X" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBar_Y" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffBar_Z" candidateClass="UIProgressView"/>
-                <relationship kind="outlet" name="diffLabelS" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="diffLabelX" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="diffLabelY" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="diffLabelZ" candidateClass="UILabel"/>
-                <relationship kind="outletCollection" name="clHeadingCollection" candidateClass="UIProgressView"/>
-                <relationship kind="outletCollection" name="clMagneticHeadingCollection" candidateClass="UIProgressView"/>
-                <relationship kind="outletCollection" name="cmCalibratedMagneticFieldCollection" candidateClass="UIProgressView"/>
-                <relationship kind="outletCollection" name="cmMagneticCollection" candidateClass="UIProgressView"/>
-                <relationship kind="outletCollection" name="diffCollection" candidateClass="UIProgressView"/>
-            </relationships>
-        </class>
-        <class className="MotionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MotionViewController.h"/>
-            <relationships>
-                <relationship kind="outletCollection" name="buttonCollection" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination">
+            <size key="portraitSize" width="768" height="1024"/>
+            <size key="landscapeSize" width="1024" height="768"/>
+        </simulatedScreenMetrics>
     </simulatedMetricsContainer>
 </document>
