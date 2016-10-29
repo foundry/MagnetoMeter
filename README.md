@@ -7,6 +7,8 @@ Demonstrates the various ways of getting Magnetometer and compass data.
 Compatible with iPhone, iPad, iOS 5.1+  
 _updated_ for iOS7, iOS8 with changes for [UIProgressBar custom image bug](http://stackoverflow.com/questions/22311516/uiprogressview-custom-track-and-progress-images-in-ios-7-1)
 
+_updated_ to ios10, XCode8: _important news:_ Apple have removed the difference between Core Motion and Core Location heading readings as tested on iPhone SE with ios 10.1. Now their output is identical. The differences are still evident on ios9 and iphone 5s. These are the only two devices and iOS versions I have been able to test on this update.
+
 BEST on iPad as the interface is pretty crowded.
 
 This is posted to support a lengthy [Stack Overflow answer](http://stackoverflow.com/questions/15380632/in-ios-what-is-the-difference-between-the-magnetic-field-values-from-the-core-l)
